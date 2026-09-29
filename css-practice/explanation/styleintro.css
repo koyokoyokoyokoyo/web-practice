@@ -1,0 +1,86 @@
+/* inline CSS will override any other
+method of CSS implementation, but this
+can be a positive */
+
+
+/* Type of selectors*/
+/* universal */
+* {
+    color: purple;
+    font-family: "Times new Roman", serif, Arial;
+    /* several names for fallback */
+    font-size: 22px; /*remember rem too*/
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* Type selectors */
+/* select specific element */
+div {
+    color: white;
+}
+/* here ALL instances of div would be selected! */
+
+
+/* class selectors */
+/* see intro.html for matching class element */
+.alert-text {
+    color: red;
+}
+
+
+/* ID selectors */
+/* The difference is that classes can be repeated while IDs cannot! */
+#title {
+    background-color: red;
+}
+/* notice how regulars use nothing, 
+classes use a dot, and
+IDs use a hashtag */
+
+
+.read,
+.unread {
+    color: white;
+    background-color: black;
+}
+/* both have unique declarations, but also share similarities */
+
+.read {
+    /* unique declarations */
+}
+
+.unread {
+    /* unique delcarations */
+}
+
+.subsection.header {
+  color: red;
+}
+/* This selects ANY element with
+ subsection AND header in it's name */
+ /* For example, something like .subsection#preview 
+ also works! a class and id!*/
+
+
+ /* descendant combinators! */
+ /* 1 of 4 types */
+
+ /* it is exactly how it sounds :p
+ nest classes/elements within each other, like so: */
+ <div class="ancestor">
+  <div class="contents">
+    <div class="contents"></div>
+  </div>
+</div>
+
+/* these would work, .ancestor .contents 
+(WITH SPACE) would target the contents class
+elemnts that are nested inside of ancestor */
+
+
+img {
+    height: auto; /*value of original img*/
+    width: 500px; 
+}
